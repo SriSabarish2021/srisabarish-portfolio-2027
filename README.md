@@ -1,39 +1,29 @@
-# Sri Sabarish — Data Science & Machine Learning Portfolio
+# Sri Sabarish — React + Vite Portfolio
 
-A personal portfolio presenting my academic journey, technical learning, internship experience, projects and interests in Data Science, Machine Learning and AI.
+React-based personal portfolio for Data Science, Machine Learning and AI. The original GSAP/Webflow visual design and interactions are retained during migration.
+
+## Stack
+- React 19 + Vite 7
+- CSS (original styles retained in src/styles/legacy.css)
+- GSAP, ScrollTrigger, SplitText and Lenis
+- Netlify deployment
 
 ## Run locally
-
-This is a static website. Clone the repository and run:
-
+Requires Node.js 22.
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Open http://localhost:8000.
+## Production build
+```bash
+npm run build
+npm run preview
+```
+The production output is dist/.
 
-## Portfolio sections
+## Netlify
+Import this GitHub repository into Netlify. Build command: npm run build. Publish directory: dist. Node 22 is configured in .nvmrc and netlify.toml.
 
-- **Hero:** Data Science and Machine Learning positioning.
-- **Skills:** Python, R, SQL, Pandas, NumPy, scikit-learn, PyTorch fundamentals, PostgreSQL, SQL Server, statistics, ETL and web-development foundations.
-- **Projects:** Gold Price Prediction, House Price Prediction, Customer Segmentation, Breast Cancer Prediction, Fake News Classification, Stock Market Direction Prediction, Image Classification and Object Detection.
-- **Journey:** BA English Literature, current MBA in Business Analytics and Finance, internships, club leadership and achievements.
-- **Focus areas:** Data analysis, predictive modelling, machine learning, deep learning foundations, data engineering concepts and emerging AI technologies.
-- **Contact:** GitHub profile and contact form.
-
-## Background
-
-I hold a BA in English Literature from Kongu Arts and Science College, Erode, and am currently pursuing an MBA in Business Analytics and Finance at Vivekananda Institute of Management Studies.
-
-Internship experience:
-- FalconX EdTech — Web Developer Intern (1 month)
-- Vetikaaran — Web Developer Intern (3 months)
-- VB Technologies — Machine Learning Intern (32 days), with exposure to ML workflows and Quantum Machine Learning exploration using Qiskit
-
-Additional experience includes serving as Chairman of the Business Analytics Club, founding-team participation in ThraftIQ, and presenting a paper on Quantum AI in medical diagnosis.
-
-## Notes
-
-The animated layout and GSAP-driven interactions are retained from the starter design. Portfolio text and sections have been rewritten to reflect my own background. Project descriptions are learning/project summaries; they do not imply production deployment or commercial outcomes.
-
-The `original.html` file is retained as a separate source/reference page. The live portfolio entry point is `index.html`.
+## Source layout
+src/components contains React components for navigation, the page shell and semantic page sections. src/content contains preserved page content, src/styles contains CSS, and src/legacy contains controlled animation initialization. Static images, fonts and animation assets are served from public/.
